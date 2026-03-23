@@ -3,7 +3,10 @@ local
 color ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_retro_flash
+drawable ic_retro_flash_inset
 drawable ic_retro_flash_monochrome
+drawable ic_retro_flash_monochrome_inset
+drawable ic_retro_flash_splash
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

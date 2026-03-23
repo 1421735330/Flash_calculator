@@ -642,7 +642,10 @@ int drawable ic_call_decline 0x7f07005d
 int drawable ic_call_decline_low 0x7f07005e
 int drawable ic_launcher_foreground 0x7f07005f
 int drawable ic_retro_flash 0x7f070060
+int drawable ic_retro_flash_inset 0x7f070073
 int drawable ic_retro_flash_monochrome 0x7f070061
+int drawable ic_retro_flash_monochrome_inset 0x7f070074
+int drawable ic_retro_flash_splash 0x7f070075
 int drawable icon_background 0x7f070062
 int drawable notification_action_background 0x7f070063
 int drawable notification_bg 0x7f070064

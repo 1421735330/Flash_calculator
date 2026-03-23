@@ -9,9 +9,9 @@
     </style>
 
     <style name="Theme.FlashGnCalculator.Starting" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#000000</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_retro_flash</item>
-        <item name="windowSplashScreenIconBackgroundColor">#000000</item>
+        <item name="windowSplashScreenBackground">#F4F4F2</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_retro_flash_splash</item>
+        <item name="windowSplashScreenIconBackgroundColor">#F4F4F2</item>
         <item name="postSplashScreenTheme">@style/Theme.FlashGnCalculator</item>
     </style>
 </resources>

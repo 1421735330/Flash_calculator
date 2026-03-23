@@ -643,7 +643,10 @@ drawable ic_call_decline
 drawable ic_call_decline_low
 drawable ic_launcher_foreground
 drawable ic_retro_flash
+drawable ic_retro_flash_inset
 drawable ic_retro_flash_monochrome
+drawable ic_retro_flash_monochrome_inset
+drawable ic_retro_flash_splash
 drawable icon_background
 drawable notification_action_background
 drawable notification_bg
