@@ -256,14 +256,20 @@ fun OutputSection(
             color = AppWhite
         )
 
-        if (statusMessage != null) {
-            Spacer(modifier = Modifier.height(10.dp))
-            Text(
-                text = statusMessage,
-                color = StatusRed,
-                style = MaterialTheme.typography.bodyLarge,
-                textAlign = TextAlign.Center
-            )
+        Spacer(modifier = Modifier.height(10.dp))
+
+        Box(
+            modifier = Modifier.height(28.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            if (statusMessage != null) {
+                Text(
+                    text = statusMessage,
+                    color = StatusRed,
+                    style = MaterialTheme.typography.bodyLarge,
+                    textAlign = TextAlign.Center
+                )
+            }
         }
     }
 }
@@ -275,12 +281,12 @@ private fun PickerSection(
     onDistanceSelected: (FlashOption) -> Unit,
     onIsoSelected: (FlashOption) -> Unit
 ) {
-    Row(
+    Column(
         modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(18.dp)
+        verticalArrangement = Arrangement.spacedBy(14.dp)
     ) {
         WheelPickerColumn(
-            modifier = Modifier.weight(1f),
+            modifier = Modifier.fillMaxWidth(),
             title = "光圈",
             options = uiState.apertureOptions,
             selectedOption = uiState.selectedAperture,
@@ -288,7 +294,7 @@ private fun PickerSection(
         )
 
         WheelPickerColumn(
-            modifier = Modifier.weight(1f),
+            modifier = Modifier.fillMaxWidth(),
             title = "距离 (m)",
             options = uiState.distanceOptions,
             selectedOption = uiState.selectedDistance,
@@ -296,7 +302,7 @@ private fun PickerSection(
         )
 
         WheelPickerColumn(
-            modifier = Modifier.weight(1f),
+            modifier = Modifier.fillMaxWidth(),
             title = "感光度",
             options = uiState.isoOptions,
             selectedOption = uiState.selectedIso,
@@ -304,3 +310,5 @@ private fun PickerSection(
         )
     }
 }
+
+
