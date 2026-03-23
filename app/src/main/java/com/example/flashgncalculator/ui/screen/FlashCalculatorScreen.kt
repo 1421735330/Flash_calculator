@@ -5,20 +5,17 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.KeyboardArrowDown
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -92,16 +89,17 @@ fun FlashCalculatorScreen(
                         onGnChanged = onGnChanged
                     )
 
-                    Spacer(modifier = Modifier.height(48.dp))
+                    Spacer(modifier = Modifier.height(36.dp))
 
                     OutputSection(
                         output = uiState.output,
                         statusMessage = uiState.powerStatusMessage
                     )
 
-                    Spacer(modifier = Modifier.height(72.dp))
+                    Spacer(modifier = Modifier.height(12.dp))
 
                     PickerSection(
+                        modifier = Modifier.offset(y = (-24).dp),
                         uiState = uiState,
                         onApertureSelected = onApertureSelected,
                         onDistanceSelected = onDistanceSelected,
@@ -239,16 +237,7 @@ fun OutputSection(
             color = AppWhite
         )
 
-        Spacer(modifier = Modifier.height(12.dp))
-
-        Icon(
-            imageVector = Icons.Outlined.KeyboardArrowDown,
-            contentDescription = null,
-            tint = AppWhite,
-            modifier = Modifier.size(30.dp)
-        )
-
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(8.dp))
 
         Text(
             text = output,
@@ -276,13 +265,14 @@ fun OutputSection(
 
 @Composable
 private fun PickerSection(
+    modifier: Modifier = Modifier,
     uiState: FlashCalculatorUiState,
     onApertureSelected: (FlashOption) -> Unit,
     onDistanceSelected: (FlashOption) -> Unit,
     onIsoSelected: (FlashOption) -> Unit
 ) {
     Column(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(14.dp)
     ) {
         WheelPickerColumn(
@@ -310,5 +300,3 @@ private fun PickerSection(
         )
     }
 }
-
-
