@@ -1,0 +1,4 @@
+com.example.flashgncalculator.test.app-androidTest-0 D:\Users\licong\Trae_Projects\flash_caculatro_new\app\build\generated\res\resValues\androidTest\debug
+com.example.flashgncalculator.test.app-mergeDebugAndroidTestResources-1 D:\Users\licong\Trae_Projects\flash_caculatro_new\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.flashgncalculator.test.app-mergeDebugAndroidTestResources-2 D:\Users\licong\Trae_Projects\flash_caculatro_new\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.flashgncalculator.test.app-debugAndroidTest-3 D:\Users\licong\Trae_Projects\flash_caculatro_new\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
