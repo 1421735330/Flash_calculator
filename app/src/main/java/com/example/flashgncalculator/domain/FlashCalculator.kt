@@ -26,6 +26,22 @@ private val powerStops = listOf(
     "1/128" to 0.0078125
 )
 
+private val thirdStopPowerSteps: List<Pair<String, Double>> = buildList {
+    val third = 2.0.pow(1.0 / 3.0)
+
+    // Build labels from low power to high power:
+    // 1/128, 1/128+0.3, 1/128+0.7, 1/64, ... , 1/1
+    for (index in powerStops.indices.reversed()) {
+        val (baseLabel, basePower) = powerStops[index]
+        add(baseLabel to basePower)
+
+        if (index > 0) {
+            add("$baseLabel+0.3" to (basePower * third))
+            add("$baseLabel+0.7" to (basePower * third * third))
+        }
+    }
+}
+
 fun calculateFlashOutput(
     gn: Int,
     aperture: Double,
@@ -40,7 +56,7 @@ fun calculateFlashOutput(
     val isOutOfRange = rawPowerFraction < minPower || rawPowerFraction > maxPower
     val clampedPowerFraction = rawPowerFraction.coerceIn(minPower, maxPower)
 
-    val nearestPowerLabel = powerStops.minBy { (_, value) ->
+    val nearestPowerLabel = thirdStopPowerSteps.minBy { (_, value) ->
         abs(value - clampedPowerFraction)
     }.first
 
